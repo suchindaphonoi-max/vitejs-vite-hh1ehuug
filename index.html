@@ -7,6 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>OMR Scanner Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- โค้ดส่วนนี้แหละครับที่หายไป (CSS แก้ปัญหาการหน่วงเวลากดปุ่มบนมือถือ) -->
+    <style>
+      body {
+        touch-action: manipulation; /* ป้องกันการ delay เวลากดปุ่มบนมือถือ */
+        -webkit-tap-highlight-color: transparent; /* เอาไฮไลท์สีฟ้าตอนกดออก */
+      }
+      button {
+        cursor: pointer;
+        z-index: 50; 
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
